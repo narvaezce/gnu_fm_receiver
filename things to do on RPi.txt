@@ -1,0 +1,6 @@
+dump 1090
+satellite decoding
+shortwave
+hd2
+gnuradio (fm + more)
+noaa radio (copy frequency playlist from linux) 

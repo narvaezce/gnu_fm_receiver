@@ -1,0 +1,101 @@
+ git clone --recursive https://github.com/gnuradio/gnuradio.git
+  204  cd gnuradio/
+  205  mkdir build
+  206  cd build
+  207  cmake -DBUILD_SHARED_LIBS=ON -DGR_OSMOSDR=OFF ..
+  208  make
+  209  ls
+  210  pwd
+  211  ls
+  212  make clean
+  213  ls
+  214  make -j$(nproc)
+  215  rtl_test -s 2400000
+  216  sudo make install
+  217  rtl_test -s 2400000
+  218  cd ../..
+  219  cd ..
+  220  mkdir osmosdr
+  221  cd osmosdr/
+  222  git clone https://github.com/gnuradio/gr-osmosdr.git
+  223  git clone git@github.com:gnuradio/gr-osmosdr.git
+  224  ls -al ~/.ssh
+  225  ssh-keygen -t rsa -b 4096 -C "narvaez@gmail.com"
+  226  ls
+  227  cd ~/.ssh
+  228  ls
+  229  cat id_rsa.pub 
+  230  cd ~/dev/osmosdr/
+  231  git clone git@github.com:gnuradio/gr-osmosdr.git
+  232  git clone https://github.com/gnuradio/gr-osmosdr.git
+  233  ssh -T git@github.com
+  234  git clone git@github.com:gnuradio/gr-osmosdr.git
+  235  git clone https://github.com/osmocom/gr-osmosdr.git
+  236  cd gr-osmosdr/
+  237  mkdir build
+  238  cd build
+  239  cmake -DGR_ENABLE=OFF -DCMAKE_INSTALL_PREFIX=/usr/local ..
+  240  make -j4
+  241  rtl_test -s 2400000
+  242  sudo make install
+  243  rtl_test -s 2400000
+  244  gnuradio-companion
+  245  rtl_test -s 2400000
+  246  gqrx
+  247  sudo make install
+  248  rtl_test -s 2400000
+  249  gqrx 
+  250  rtl_test -s 2400000
+  251  pwd
+  252  ls
+  253  cd ../
+  254  ls
+  255  cd ..
+  256  ls
+  257  cd ../gqrxbuild/gqrx/
+  258  ls
+  259  cd build
+  260  ls
+  261  sudo make install
+  262  which gnuradio
+  263  which gnuradio-companion
+  264  which gr-osmosdr
+  265  which osmosdr
+  266  cd ../..
+  267  ls
+  268  cd ..
+  269  cd osmosdr/gr-osmosdr/build/
+  270  sudo apt install d
+  271  sudo make install
+  272  cd ../..
+  273  ls
+  274  cd ..
+  275  ls
+  276  cd gqrxbuild/gqrx/build
+  277  sudo make install
+  278  ls
+  279  cd ../../
+  280  ls
+  281  cd /usr/lib
+  282  ls
+  283  cd ../local/lib/
+  284  sudo cp libgnuradio-osmosdr.so /usr/lib/aarch64-linux-gnu/
+  285  cd /usr/lib/aarch64-linux-gnu/
+  286  ks
+  287  ls
+  288  pwd
+  289  cd ../../
+  290  ls
+  291  cd ~/dev
+  292  ls
+  293  cd gqrxbuild/gqrx/build/
+  294  sudo make install
+  295  which gqrx
+  296  rtl_test -s 2400000
+  297  gqrx
+  298  sudo ldconig
+  299  sudo ldconfig
+  300  gqrx 
+  301  gnuradio-companion
+  302  gqrx 
+  303  cd ~/.ssh/

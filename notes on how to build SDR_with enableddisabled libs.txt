@@ -1,0 +1,334 @@
+first install rtl sdr using these notes
+github.com/AlexandreRouma/SDRPlusPlus/issues/1366
+second make gqrx pointing to header and library files
+(dont install)
+second install gnuradio without libraries
+third install osmosdr without libraries    
+in gqrx folder run: sudo make install
+sudo ldconfig
+reboot
+test rtl_test -s 2400000 at every point
+
+
+
+
+   34  sudo apt purge ^librtlsdr
+   36  sudo rm -rvf /usr/lib/librtlsdr*
+   37  sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+  
+
+   38  sudo apt-get install libusb-1.0-0dev git cmake pkg-config
+
+   46  git clone https://github.com/rtlsdrblog/rtl-sdr-blog
+   47  sudo apt-get install libusb-1.0-0dev git cmake pkg-config
+   48  cd rtl-sdr-blog/
+   49  mkdir build
+   50  cd build
+   55  cmake ../ -DINSTALL_UDEV_RULES=ON
+   56  sudo apt update
+   57  sudo apt upgrade
+   58  sudo apt install cmake
+   59  sudo apt install raspberrypi-kernel-headers build-essential dkms
+   60  ls
+   61  cmake --version
+
+   65  cd build
+
+   67  cmake ../ -DINSTALL_UDEV_RULES=ON
+   68  sudo apt-get udpate
+   69  sudo apt update
+   70  sudo apt install libusb-1.0-0-dev git cmake pkg-config
+   71  cmake ../ -DINSTALL_UDEV_RULES=ON
+   72  make
+   73  sudo make install
+   74  nano /etc/udev/rules.d
+   75  nano /etc/udev/rules.d/rtl-sdr.rules 
+   76  cp /etc/udev/rules.d/rtl-sdr.rules /etc/udev/rules.d/rtl-sdr.rules.backup
+   77  sudo cp /etc/udev/rules.d/rtl-sdr.rules /etc/udev/rules.d/rtl-sdr.rules.backup
+   78  pwd
+   79  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+   80  sudo ldconfig
+   81  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+   82  rtl_test -s 2400000
+   83  gqrx
+   84  which gqrx
+   85  sudo apt update
+   86  sudo apt upgrade
+   87  sudo apt install cmake pkg-config libvolk2-dev libvolk2-bin gnuradio gr-osmosdr libqt5multimedia5-plugins libqt5svg5-dev libusb-1.0-0-dev libusb-1.0-0
+   88  sudo apt install gqrx-sdr
+   89  gqrx
+   90  cd ~/dev
+   91  ls
+   92  cd rtl-sdr-blog/
+   93  cd build/
+   94  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+   95  sudo ldconfig
+   96  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+   97  rtl_test -s 2400000
+   98  gqrx
+   99  sudo apt purge ^librtlsdr
+  100  sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+  102  sudo apt install libusb-1.0-0-dev git cmake pkg-config
+  104  sudo make install
+  105  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  106  sudo ldconfig
+  107  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+  108  rtl_test -s 2400000
+  109  gqrx
+  112  sudo apt install gqrx-sdr
+  113  rtl_test -s 2400000
+  114  gqrx 
+  115  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  117  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+  118  sudo make install
+  119  rtl_test -s 2400000
+  120  gqrx
+  121  sudo make install
+  122  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  123  sudo ldconfig
+  125  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+  127  sudo apt purge ^librtlsdrd
+  128  which gqrx
+  129  sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+  130  sudo make install
+  131  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  132  sudo ldconfig
+  133  rtl_test -s 2400000
+  134  sudo apt purge ^librtlsdr
+  135  sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+  136  sudo make install
+  137  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  138  sudo ldconfig
+  140  gqrx
+  146  mkdir gqrxbuild
+  147  cd gqrxbuild/
+  148  git clone https://github.com/csete/gqrx.git
+  149  cd gqrx/
+  150  mkdir build
+  151  cd build
+  152  grep DLIBRTLSDR *
+  153  grep -rl "DLIBRTLSDR" *
+  154  which grep
+  155  ls
+  156  pwd
+  157  cd ..
+  158  grep -rl "DLIBRTLSDR" *
+  159  ls
+  160  nano MANIFEST.md 
+  161  grep -rl "gnu" *
+
+  165  cd build
+  1
+  167  cmake -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DLIBRTLSDR_INCLUDE=/usr/local/include/ -DLIBRTLSDR_LIBRARY=/usr/local/lib/librtlsdr.so ..
+  168  sudo apt install qt5-default qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+  169  sudo apt update
+  170  sudo apt upgrade
+  171  sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+  172  cmake -DLIBRTLSDR_INCLUDE=/usr/local/include/ -DLIBRTLSDR_LIBRARY=/usr/local/lib/librtlsdr.so ..
+  173  sudo apt update
+  174  sudo apt install gnuradio gr-osmosdr
+  175  cmake -DLIBRTLSDR_INCLUDE=/usr/local/include/ -DLIBRTLSDR_LIBRARY=/usr/local/lib/librtlsdr.so ..
+  176  sudo apt update
+  177  sudo apt install libpulse-dev
+  178  cmake -DLIBRTLSDR_INCLUDE=/usr/local/include/ -DLIBRTLSDR_LIBRARY=/usr/local/lib/librtlsdr.so ..
+  179  make
+  180  rtl_test -s 2400000
+  181  sudo apt purge ^librtlsdr
+  182  sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+  183  which gqrx
+  184  cd ../../../rtl-sdr-blog/build/
+  186  rtl_test -s 2400000
+  187  sudo make install
+  188  sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+  189  sudo ldconfig
+  190  echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+  191  rtl_test -s 2400000
+  192  cd ../../
+  193  cd gqrxbuild/
+  194  ls
+  195  cd gqrx/build
+  196  sudo make install
+  197  rtl_test -s 2400000
+
+
+
+
+  201  mkdir gnuradio
+  202  cd gnuradio/
+  203  git clone --recursive https://github.com/gnuradio/gnuradio.git
+  204  cd gnuradio/
+  205  mkdir build
+  206  cd build
+  207  cmake -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DBUILD_SHARED_LIBS=ON -DGR_OSMOSDR=OFF ..
+      cmake -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DENABLE_DEFAULT=ON -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON -DENABLE_GR_WXGUI=OFF ..
+  
+208  make
+  209  ls
+  210  pwd
+  211  ls
+  212  make clean
+  213  ls
+  214  make -j$(nproc)
+  215  rtl_test -s 2400000
+  216  sudo make install
+  217  rtl_test -s 2400000
+  218  cd ../..
+  219  cd ..
+  220  mkdir osmosdr
+  221  cd osmosdr/
+  222  git clone https://github.com/gnuradio/gr-osmosdr.git
+  223  git clone git@github.com:gnuradio/gr-osmosdr.git
+  224  ls -al ~/.ssh
+  225  ssh-keygen -t rsa -b 4096 -C "narvaez@gmail.com"
+  226  ls
+  227  cd ~/.ssh
+  228  ls
+  229  cat id_rsa.pub 
+  230  cd ~/dev/osmosdr/
+  231  git clone git@github.com:gnuradio/gr-osmosdr.git
+  232  git clone https://github.com/gnuradio/gr-osmosdr.git
+  233  ssh -T git@github.com
+  234  git clone git@github.com:gnuradio/gr-osmosdr.git
+  235  git clone https://github.com/osmocom/gr-osmosdr.git
+  236  cd gr-osmosdr/
+  237  mkdir build
+  238  cd build
+  239  cmake -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DGR_ENABLE=OFF -DCMAKE_INSTALL_PREFIX=/usr/local ..
+  240  make -j4
+  242  sudo make install
+  244  gnuradio-companion
+  257  cd ../gqrxbuild/gqrx/
+  259  cd build
+  261  sudo make install
+  262  which gnuradio
+  263  which gnuradio-companion
+  264  which gr-osmosdr
+  265  which osmosdr
+  269  cd osmosdr/gr-osmosdr/build/
+  270  sudo apt install d
+  271  sudo make install
+  272  cd ../..
+  273  ls
+  274  cd ..
+  275  ls
+  276  cd gqrxbuild/gqrx/build
+  277  sudo make install
+  278  ls
+  279  cd ../../
+  280  ls
+  281  cd /usr/lib
+  282  ls
+  283  cd ../local/lib/
+  284  sudo cp libgnuradio-osmosdr.so /usr/lib/aarch64-linux-gnu/
+  285  cd /usr/lib/aarch64-linux-gnu/
+  286  ks
+  287  ls
+  288  pwd
+  289  cd ../../
+  290  ls
+  291  cd ~/dev
+  292  ls
+  293  cd gqrxbuild/gqrx/build/
+  294  sudo make install
+  295  which gqrx
+  297  gqrx
+  299  sudo ldconfig
+  300  gqrx 
+  301  gnuradio-companion
+  302  gqrx 
+
+
+
+
+ 1217  sudo apt remove gnuradio gnuradio-dev
+ 1218  sudo apt autoremove
+
+
+ 1610  sudo apt-get install libboost-all-dev libzmq3-dev libvolk1-dev libgstreamer1.0-dev soapysdr-module-remote
+ 1611  sudo apt-get install libuhd-dev
+ 1612  sudo apt-get update
+ 1613  sudo apt-get install build-essential cmake     python3-dev python3-pyqt5 python3-wxgtk4.0     libboost-all-dev libzmq3-dev libvolk1-dev libgstreamer1.0-dev     qt5-default python3-numpy python3-scipy     soapysdr-module-remote
+ 1614  sudo apt-get install build-essential cmake     python3-dev python3-pyqt5 python3-wxgtk4.0     libboost-all-dev libzmq3-dev libvolk2-dev libgstreamer1.0-dev     qt5-default python3-numpy python3-scipy     soapysdr-module-remote
+ 1615  sudo apt-get install build-essential cmake     python3-dev python3-pyqt5 python3-wxgtk4.0     libboost-all-dev libzmq3-dev libvolk2-dev libgstreamer1.0-dev   python3-numpy python3-scipy     soapysdr-module-remote
+ 1616  gnuradio-companion
+
+
+ 1423  sudo apt-get install -y git cmake build-essential python3-dev python3-pip libboost-all-dev libfftw3-dev libgsl-dev libzmq3-dev python3-mako python3-sphinx python3-numpy python3-lxml libqwt-qt5-dev liblog4cpp5-dev libzmq5 libgmp-dev swig liborc-0.4-dev libusb-1.0-0-dev libudev-dev libsdl1.2-dev libpython3-dev libcodec2-dev libncurses5-dev libncursesw5-dev doxygen qtbase5-dev libqt5opengl5-dev python3-click python3-scipy libvolk2-dev
+ 1424  sudo apt-get install libsndfile1-dev
+
+
+  203  git clone --recursive https://github.com/gnuradio/gnuradio.git
+  204  cd gnuradio/
+  205  mkdir build
+  206  cd build
+      cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D ENABLE_GR_COMPANION=ON -DENABLE_GR_BLOCKS=ON -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DENABLE_DEFAULT=ON -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON -DENABLE_GR_WXGUI=OFF ..
+   ..
+208  make
+  209  ls
+  210  pwd
+  211  ls
+  212  make clean
+  213  ls
+  214  make -j$(nproc)
+  215  rtl_test -s 2400000
+  216  sudo make install
+
+
+
+
+  236  cd gr-osmosdr/
+  237  mkdir build
+  238  cd build
+  239  cmake -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DGR_ENABLE=OFF -DCMAKE_INSTALL_PREFIX=/usr/local ..
+  240  make -j4
+  242  sudo make install
+  244  gnuradio-companion
+  257  cd ../gqrxbuild/gqrx/
+  259  cd build
+  261  sudo make install
+
+
+
+cd gqrxbuild/gqrx/build
+
+ cmake -DCMAKE_PREFIX_PATH=/usr/local -DENABLE_FUNCUBE=OFF -DENABLE_AIRSPY=ON -DENABLE_AIRSPYHF=ON -DLIBRTLSDR_INCLUDE=/usrdbrtlsdr.so ..
+ make -j4
+ sudo make install
+
+
+ 1767  git clone https://github.com/analogdevicesinc/libad9361-iio.git
+ 1768  cd libad9361-iio/
+ 1769  ls
+ 1770  mkdir build
+ 1771  cd build
+ 1772  cmake ..
+ 1773  make
+ 1774  sudo make install
+ 1775  sudo ldconfig
+ 1776  cd ../../..
+ 1777  ls
+ 1778  cd sdrpp/SDRPlusPlus/build/
+ 1779  cmake .. -DOPT_BUILD_RTL_SDR_SOURCE=ON
+ 1780  make -j4
+ 1781  sudo make install
+
+
+sudo apt-get install -y \
+git cmake build-essential \
+python3-dev python3-pip \
+libboost-all-dev libfftw3-dev libgsl-dev \
+libzmq3-dev python3-mako python3-sphinx \
+python3-numpy python3-lxml libqwt-qt5-dev \
+liblog4cpp5-dev libzmq5 libgmp-dev swig \
+liborc-0.4-dev libusb-1.0-0-dev libudev-dev \
+libsdl1.2-dev libpython3-dev libcodec2-dev \
+libncurses5-dev libncursesw5-dev \
+doxygen qtbase5-dev libqt5opengl5-dev \
+python3-click python3-scipy libvolk2-dev
+
+
+sudo nano /etc/bluetooth/main.conf 
+ 1835  sudo systemctl restart bluetooth
+
+
+
